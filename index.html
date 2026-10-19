@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <title>Nivetha's Birthday Surprise 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="sky" aria-hidden="true">
+    <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
+    <span class="doodle d1">♡</span><span class="doodle d2">✿</span><span class="doodle d3">♡</span>
+  </div>
+  <div class="progress" aria-label="Surprise progress"><span id="progressBar"></span></div>
+
+  <main class="app">
+    <!-- SCREEN 1 -->
+    <section class="screen active" id="screen-1" data-screen="1">
+      <div class="sticker cloud">☁️</div>
+      <div class="eyebrow">A VERY IMPORTANT NOTICE 📢</div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun">☀️</div>
+        <div class="bear">🐻‍❄️</div>
+        <div class="heart h1">💗</div>
+        <div class="heart h2">✨</div>
+        <div class="heart h3">🎀</div>
+      </div>
+      <p class="tiny-label">ATTENTION, MISS NIVETHA</p>
+      <h1>Hey birthday<br><span class="pink">girl!</span> 🎂</h1>
+      <p class="lead">Unakku oru chinna surprise irukku…<br><strong>but konjam patience venum, madam. 😌</strong></p>
+      <button class="btn primary" data-next>Open my surprise <span>→</span></button>
+      <p class="micro">⚠️ Excessive cuteness & mokka jokes ahead.</p>
+    </section>
+
+    <!-- SCREEN 2 -->
+    <section class="screen" id="screen-2" data-screen="2">
+      <div class="step-pill">LEVEL 01 · BIRTHDAY UPDATE</div>
+      <div class="big-emoji wobble">🥳</div>
+      <h2>Breaking news! 📰</h2>
+      <div class="paper-card">
+        <span class="news-tag">LIVE UPDATE</span>
+        <p class="news-title">Nivetha has levelled up!</p>
+        <p>Innum oru varusham older… aana maturity mattum <span class="pink">“coming soon”</span> nu kaatuthu. 😂</p>
+        <div class="news-footer">— Local Bst frnd News Network 🎤</div>
+      </div>
+      <p class="lead">Indha report-ku nee agree panriya?</p>
+      <div class="button-row">
+        <button class="btn primary" id="agreeBtn">Aama 😭</button>
+        <button class="btn soft" id="denyBtn">Fake news! 😤</button>
+      </div>
+      <p class="micro" id="newsReply" aria-live="polite"></p>
+      <button class="btn text-btn" data-next>Seri, next enna? →</button>
+    </section>
+
+    <!-- SCREEN 3 -->
+    <section class="screen" id="screen-3" data-screen="3">
+      <div class="step-pill">LEVEL 02 · TOP SECRET 🎁</div>
+      <h2>Un gift inga dhaan!</h2>
+      <p class="lead">Box-ah tap pannu. But careful… idhula gold illa, mokkaya  dhaan irukkum. 🤡</p>
+      <button class="gift-button" id="giftButton" aria-label="Open birthday gift">
+        <span class="gift-glow"></span><span class="gift-box" id="giftBox"><span class="gift-lid"></span><span
+            class="gift-ribbon-v"></span><span class="gift-ribbon-h"></span><span class="gift-bow">🎀</span></span>
+        <span class="tap-hint">TAP TO OPEN ✨</span>
+      </button>
+      <div class="reveal hidden" id="giftReveal" aria-live="polite">
+        <div class="big-emoji">🧸💖</div>
+        <h3>Surpriseee, Nivetha!</h3>
+        <p>Unakku priceless gift: <strong>ennoda friendship</strong> 😌💅 Return policy illa. Lifetime subscription!</p>
+        <button class="btn primary" data-next>Innum irukkaa? 👀 →</button>
+      </div>
+      <p class="micro" id="giftHint">Hint: box touch pannina dhaan magic nadakkum.</p>
+    </section>
+
+    <!-- SCREEN 4 -->
+    <section class="screen" id="screen-4" data-screen="4">
+      <div class="step-pill">LEVEL 03 · BESTIE TEST 🧠</div>
+      <div class="big-emoji">🤔</div>
+      <h2>Oru mukkiyamaana quiz!</h2>
+      <p class="lead">Nivetha-va pathi un Bst Frnd  enna nenakkuraan nu paarpom. 😂</p>
+      <div class="quiz-card" id="quizCard">
+        <div class="quiz-count" id="quizCount">QUESTION 1 / 3</div>
+        <h3 id="quizQuestion">Nivetha oda special talent enna?</h3>
+        <div class="answers" id="answers">
+          <button class="answer" data-answer="0">Overthinking Olympics 🥇</button>
+          <button class="answer" data-answer="1">Reply late pannradhu 📱</button>
+          <button class="answer" data-answer="2">Ellathulayum cute-ah irukradhu 😌</button>
+        </div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <button class="btn primary hidden" id="nextQuestion">Next question →</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 5 -->
+    <section class="screen" id="screen-5" data-screen="5">
+      <div class="step-pill">LEVEL 04 · SOFT CORNER 💌</div>
+      <div class="big-emoji">💌</div>
+      <h2>Okay okay… jokes aside.</h2>
+      <p class="lead">Konjam feelings-ku time kuduppom. Over scene nu solla koodadhu! 🥹</p>
+      <button class="letter-button" id="letterButton">
+        <span class="envelope">💌</span>
+        <span><strong>For Nivetha</strong><small>Tap to open your letter</small></span>
+        <span class="letter-arrow">↗</span>
+      </button>
+      <article class="letter hidden" id="letter">
+        <div class="letter-top">TO MY FAVOURITE CHAOS HUMAN 💗</div>
+        <p>Happy Birthday, Nivetha! 🥹🎂</p>
+        <p>Unna maadhiri oru friend kidaichadhu honestly romba special. Un kooda pesura random moments, sirippu, mokka
+          jokes — idhellaam chinna vishayam maadhiri therinjaalum, enakku nalla memories.</p>
+        <p>Always happy-ah iru, un dreams ellam achieve pannu, un dream la paakura paiyan seekiram aa nerla varuvan avana yae love panni mrg panniko- adhuku related aa tha uanku reels varudhu pola 😂🫶.</p>
+        <p>Ippo ilfe kastama irukunu nenaikadha poga poga edhuvum seri aavadhu😅 situation ku etha maadri nee tha unna adapt pannikanum🫠</p>
+        <p>But Happy moments aaa irundhalum seri nee depressed moments aaa irundhalum seri na eppoo vum un kuda tha iruupen😘</p>
+        <p>Na work la busy aaa irundhalum konjo neram un kuda time spend pandradhu enaku releaf aaa tharum😙, enoda DM la ethana per msg pannalum yarukum reply panna maaaten but unaku mattum reply pandren na therinjko nee en life la evolo special and important nu🥰</p>
+        <p>Innum few years la namma teenagers age aa thaandiduvom so konjo mature aava try pannu indha day la irudhu un emotions aa control panna kathuko, ellathukum odanae react  panna dha , sila peoples unna life la emathirukalam avanga kitta irundhu konjo thoorama vae irru👍🏻 </p>
+        <p>Na un kuda  irukura varaikum una happy ya vachirupen , oru nalla frnd un life aaa next stage ku eduthutu pova help pannuven, ini mel aachi life la konjo urupudra vela ya paaru , daily one new things aa learn pannu self improvement la focus pannu ✍🏻, konjo attittude build panniko, say weak and Be storng 💪🏻 </p>
+        <p>Unakku nalla things mattum nadakkanum. No matter how busy life gets, I’ll always be cheering for you. Have
+          the happiest birthday, Mahhh!! 💖</p>
+        <div class="letter-sign">With lots of love & unlimited kalaaichal,<br><strong>Your Best Friend... 🐻</strong></div>
+      </article>
+      <button class="btn primary letter-next hidden" id="letterNext">Final surprise-ku vaa! 🎉 →</button>
+    </section>
+
+    <!-- SCREEN 6 -->
+    <section class="screen final-screen" id="screen-6" data-screen="6">
+      <div class="final-stars">✨ ⭐ ✨</div>
+      <div class="big-emoji cake-emoji">🎂</div>
+      <div class="eyebrow">MISSION ACCOMPLISHED</div>
+      <h1>Happy Birthday,<br><span class="pink">Nivetha!</span> 💖</h1>
+      <p class="lead">Innaiku un day! Nalla saapdu, neraya sirichi, unakku pudichadha pannu. You’re really special, okay-va?
+        🫶</p>
+      <div class="cake-card">
+        <div class="cake-doodle">🎂</div>
+        <p id="wishHeading"><strong>Birthday wish panniko!</strong></p>
+        <p class="micro" id="wishInstruction">Wish sollitu button press pannu 👇</p>
+        <button class="btn primary" id="wishButton">I made a wish ✨</button>
+      </div>
+      <p class="final-note hidden" id="finalNote">Wish sent to the birthday universe! 💌✨</p>
+      <button class="btn soft restart hidden" id="restartButton">Replay the surprise ↻</button>
+      <div class="signature">made with 💗, chaos & bestie energy</div>
+    </section>
+    <footer><span>🌷 made just for Nivetha</span><span id="screenNumber">01 / 06</span></footer>
+  </main>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  
+<section id="cakeScreen" class="cake-screen hidden">
+  <div class="cake-card">
+    <h1>Here's Your Birthday Cake! 🎂✨</h1>
+    <p id="cakeHint">Make a wish and blow the candle! 🌬️💗</p>
+
+    <div class="countdown" id="countdown">10</div>
+
+    <div class="cake-scene" id="cakeScene">
+      <div class="candle">
+        <div class="flame" id="flame"></div>
+        <div class="smoke" id="smoke"></div>
+        <div class="candle-stick"></div>
+      </div>
+
+      <div class="cake" id="cake">
+        <div class="icing"></div>
+        <div class="sprinkles">•　✦　•　✦　•</div>
+        <div class="cake-side"></div>
+        <div class="cut-line" id="cutLine"></div>
+        <div class="cut-mask"></div>
+      </div>
+    </div>
+
+    <button id="cutButton" class="cake-button hidden">
+      Cut the Cake 🎂
+    </button>
+
+    <p id="swipeHint" class="hidden">
+      👆 Swipe from the top of the cake to the bottom!
+    </p>
+
+    <div id="sliceResult" class="slice-result hidden">
+      <div class="plate">
+        <div class="cake-slice">
+          <div class="slice-icing"></div>
+          <div class="slice-layer"></div>
+          <div class="slice-cream">✦</div>
+        </div>
+      </div>
+      <h2>One slice, made just for you! 🍰</h2>
+      <p>Take your birthday cake and eat! 💗</p>
+    </div>
+
+    <button id="continueButton" class="cake-button hidden">
+      Continue to your surprise 💌
+    </button>
+  </div>
+</section>
+  <script src="script.js"></script>
+</body>
+
+</html>
